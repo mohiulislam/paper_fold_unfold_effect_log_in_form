@@ -1,0 +1,158 @@
+body {
+  height: 100vh;
+  background: rgb(31, 233, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  #sign_in {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: rgb(255, 200, 90);
+    padding: 10px;
+    font-weight: bold;
+    transition: background 0.5s;
+    &:hover {
+      background: rgb(255, 150, 2);
+    }
+  }
+  #paper {
+    background-color: rgb(6, 16, 54);
+    height: 320px;
+    width: 250px;
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+    display: none;
+    padding-bottom: 20px;
+    input {
+      display: block;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      padding: 8px;
+      position: absolute;
+      right: 50%;
+      top: 50px;
+      transform: translateX(50%);
+    }
+    [type="password"] {
+      top: 110px;
+    }
+    button {
+      font-weight: bold;
+      height: 40px;
+      width: 70px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      right: 50%;
+      bottom: 50px;
+      align-self: end;
+      margin-bottom: 60px;
+      color: rgb(6, 16, 54);
+      @keyframes anim {
+        0% {
+          color: transparent;
+        }
+        50% {
+          color: transparent;
+          width: 40px;
+          border: dashed rgb(255, 255, 255) 4px;
+          border-radius: 50%;
+          background-color: transparent;
+          transform: rotateZ(0deg);
+        }
+        100% {
+          color: transparent;
+          transform: rotateZ(360deg);
+          width: 40px;
+          border: dashed rgb(255, 255, 255) 4px;
+          border-radius: 50%;
+          background-color: transparent;
+        }
+      }
+
+      i {
+        color: white;
+        transform: scale(3.3);
+      }
+    }
+    #fr_pass,
+    #sn_up {
+      color: rgb(255, 255, 255);
+      font-size: x-small;
+      top: 150px;
+      transform: translateX(50%);
+      right: 50%;
+      position: absolute;
+      text-decoration: none;
+    }
+    #sn_up {
+      top: 180px;
+      font-size: 13px;
+    }
+    #paper_effect {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      border-style: solid;
+      border-width: 320px 0 0 250px;
+      border-radius: 0 10px 0 0;
+      border-color: rgb(255, 255, 255) rgb(31, 233, 255);
+      z-index: 11;
+      transition: all 1s;
+      @keyframes unfold {
+        100% {
+          border-width: 0;
+        }
+      }
+      @keyframes fold {
+        100% {
+          border-width: 0;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      color: white;
+      font-size: x-small;
+      left: 32px;
+      &[for="mail"] {
+        top: 30px;
+      }
+      &[for="pass"] {
+        top: 90px;
+      }
+    }
+    #log_in_with_div{
+      position: absolute;
+      bottom: 16px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      a {
+      text-decoration: none;
+      color: white;
+      font-size: x-large;
+      display: block;
+      margin:0 10px;
+    }
+    .fa-apple{
+      font-size: 30px;
+      margin-bottom: 3px;
+    }
+    span{
+        position: absolute;
+        color: aliceblue;
+        bottom: 35px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}
